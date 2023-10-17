@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import './Screen1.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -18,12 +20,12 @@ class MyApp extends StatelessWidget {
     builder: (_ , child) {
     return
       MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Flutter Demo',debugShowCheckedModeBanner: false,
         theme: ThemeData(
 
           primarySwatch: Colors.blue,
         ),
-        home:MyApp(),
+        home:Screen1(),
       );}
     );
   }

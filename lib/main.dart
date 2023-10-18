@@ -14,22 +14,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
         designSize: const Size(375, 812),
-    minTextAdapt: true,
-    splitScreenMode: true,
-    // Use builder only if you need to use library outside ScreenUtilInit context
-    builder: (_ , child) {
-    return
-      MaterialApp(
-        title: 'Flutter Demo',debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-
-          primarySwatch: Colors.blue,
-        ),
-        home:Screen1(),
-      );}
-    );
+        minTextAdapt: true,
+        splitScreenMode: true,
+        // Use builder only if you need to use library outside ScreenUtilInit context
+        builder: (_, child) {
+          return MaterialApp(
+            title: 'Flutter Demo',
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+            ),
+            home: Screen1(),
+          );
+        });
   }
 }
-
-
-

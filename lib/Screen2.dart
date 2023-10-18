@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import './Screen3.dart';
 
 class Screen2 extends StatefulWidget {
   const Screen2({Key? key}) : super(key: key);
@@ -72,80 +73,86 @@ class _Screen2State extends State<Screen2> {
           SizedBox(height: 23.15),
           Padding(
             padding: const EdgeInsets.only(left: 28, right: 28),
-            child: Container(
-              width: 319,
-              height: 234,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color(0xfff3f3f3)),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 22, top: 17),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("NEAREST CAR",
-                        style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xff787878))),
-                    SizedBox(
-                      height: 9,
-                    ),
-                    Image.asset(
-                      "assets/d.png",
-                      width: 302.03192138671875.w,
-                      height: 124.55186462402344.h,
-                    ),
-                    Text("Fortuner GR",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xff2C2B34))),
-                    SizedBox(
-                      height: 9,
-                    ),
-                    Row(
-                      children: [
-                        Image.asset(
-                          "assets/e.png",
-                          width: 12.w,
-                          height: 13.h,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 4),
-                          child: Text("> 870km",
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color(0xff787878))),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 17),
-                          child: Image.asset(
-                            "assets/f.png",
-                            width: 14.w,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => Screen3()));
+              },
+              child: Container(
+                width: 319,
+                height: 234,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color(0xfff3f3f3)),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 22, top: 17),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("NEAREST CAR",
+                          style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: Color(0xff787878))),
+                      SizedBox(
+                        height: 9,
+                      ),
+                      Image.asset(
+                        "assets/d.png",
+                        width: 302.03192138671875.w,
+                        height: 124.55186462402344.h,
+                      ),
+                      Text("Fortuner GR",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xff2C2B34))),
+                      SizedBox(
+                        height: 9,
+                      ),
+                      Row(
+                        children: [
+                          Image.asset(
+                            "assets/e.png",
+                            width: 12.w,
                             height: 13.h,
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 4),
-                          child: Text("50L",
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color(0xff787878))),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 89),
-                          child: Text("\$ 45,00/h",
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                              )),
-                        )
-                      ],
-                    )
-                  ],
+                          Padding(
+                            padding: const EdgeInsets.only(left: 4),
+                            child: Text("> 870km",
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color(0xff787878))),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 17),
+                            child: Image.asset(
+                              "assets/f.png",
+                              width: 14.w,
+                              height: 13.h,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 4),
+                            child: Text("50L",
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color(0xff787878))),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 89),
+                            child: Text("\$ 45,00/h",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                )),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

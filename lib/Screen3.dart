@@ -29,8 +29,14 @@ class _Screen3State extends State<Screen3> {
                     padding: const EdgeInsets.only(left: 22, top: 57),
                     child: Row(
                       children: [
-                        Icon(
-                          Icons.arrow_back,
+                        GestureDetector(
+                    onTap: () {
+                      Navigator.of(context)
+                  .pop();
+                  },
+                          child: Icon(
+                            Icons.arrow_back,
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 286),
